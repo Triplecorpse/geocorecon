@@ -26,6 +26,7 @@ article blockquote p, article blockquote li, .copyright
 	font-size:12px;
 	font-style:italic;
 	color:#555;
+	padding-left:0px;
 }
 
 article blockquote
