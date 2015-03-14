@@ -16,10 +16,12 @@ headsets:'\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=headet_standards.html">\
 		Стандарты рулевых колонок\
 	</a>\
-	<a class="list-group-item" href="&art=conventional_threadless.html">\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=conventional_threadless.html">\
 		Обслуживание безрезьбовых колонок\
 	</a>\
 </div>'}
+
+console.log('url, cat: ' url + ' ' + cat);
 
 //-------------------------------------------------------------------------------------------------------------
 
