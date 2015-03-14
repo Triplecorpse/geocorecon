@@ -23,7 +23,7 @@
       console.log("url: "+url);
       var parameters = document.location.search;  //?cat=xxx&art=yyy
       var cat = null;
-      var art = null;
+      var art = "!mainDescription";
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
@@ -160,7 +160,10 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          document.write(htmls[cat]);
+          if(cat)
+          {
+            document.write(htmls[cat]);
+          }
         </script>
       </div>
       <div class="col-md-8">
