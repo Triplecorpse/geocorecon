@@ -21,7 +21,7 @@ article h2
 {
 	margin-top:0px;
 }
-article blockquote p, article blockquote li, .copyright
+article blockquote p, article blockquote ul, article blockquote ol, article blockquote li, .copyright
 {
 	font-size:12px;
 	font-style:italic;
