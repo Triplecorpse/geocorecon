@@ -148,7 +148,7 @@
         </div>
         <div class="col-sm-4 well headerwell">
           <p>
-            <span class="label label-warning">Демо версия, ни один из контактов не работает</span>
+            <span class="label label-warning">Демо версия, ни один из контактов не работает</span><br />
             Тел: 097-149-**-**<br />
             Skype: micro**** <a href="callto:micro****">(Позвонить)</a><br />
             Email: benzin***@list.ru <a href="mailto:benzin***@list.ru">(Написать письмо)</a>
@@ -163,12 +163,21 @@
           document.write(htmls[cat]);
         </script>
       </div>
-      <div class="col-md-8">
+      <div id="art" class="col-md-8">
         <article>
           <script>
-            function bodyLoad()
+            if(cat && art)
             {
-              //I need to insert some articles
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange=function()
+                {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                  {
+                  document.getElementById("art").innerHTML=xmlhttp.responseText;
+                  }
+                }
+              xmlhttp.open("GET", url + "?cat=" + cat + "&art=" + art, true);
+              xmlhttp.send();
             }
           </script>
         </article>
