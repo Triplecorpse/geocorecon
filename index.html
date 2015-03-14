@@ -45,13 +45,13 @@
       console.log("article: " + art);
       
       //We need to execute this function only after body load to use jquery. This may remove unnessesary charachters from GET parameters
-      function loadBody()
-      {
-      	art = $(art).text();
-      	cat = $(cat).text();
-      	console.log("category: " + cat);
-      	console.log("article: " + art);
-      }
+      //function loadBody()
+      //{
+      	//art = $(art).text();
+      	//cat = $(cat).text();
+      	//console.log("category: " + cat);
+      	//console.log("article: " + art);
+      //}
       
     </script>
     <script type="text/javascript" src="htmls/sideMenus/sideMenus.js"></script>
@@ -87,10 +87,10 @@
 				  				Колёса <span class="caret"></span>
 				  			</a>
 				  			<ul class="dropdown-menu" role="menu">
-  								<li><a href="#">Втулки</a></li>
-  								<li><a href="#">Спицы</a></li>
-  								<li><a href="#">Обода</a></li>
-  								<li><a href="#">Резина</a></li>
+  								<li><a href="?cat=hubs">Втулки</a></li>
+  								<li><a href="?cat=spokes">Спицы</a></li>
+  								<li><a href="?cat=rims">Обода</a></li>
+  								<li><a href="?cat=tires">Резина</a></li>
   							</ul>
 			  			</li>
 			  			<li class="dropdown">
@@ -98,10 +98,10 @@
 				  				Ходовая часть <span class="caret"></span>
 				  			</a>
 				  			<ul class="dropdown-menu" role="menu">
-  								<li><a href="#">Педали</a></li>
-  								<li><a href="#">Системы</a></li>
-  								<li><a href="#">Кассеты</a></li>
-  								<li><a href="#">Цепи</a></li>
+  								<li><a href="?cat=pedals">Педали</a></li>
+  								<li><a href="?cat=cranksets">Системы</a></li>
+  								<li><a href="?cat=cassetes">Кассеты</a></li>
+  								<li><a href="?cat=chains">Цепи</a></li>
   							</ul>
 			  			</li>
 			  			<li class="dropdown">
@@ -109,11 +109,11 @@
 				  				Навесное оборудование <span class="caret"></span>
 				  			</a>
 				  			<ul class="dropdown-menu" role="menu">
-  								<li><a href="#">Манетки</a></li>
-  								<li><a href="#">Томрозная система</a></li>
-  								<li><a href="#">Передние переключатели</a></li>
-  								<li><a href="#">Задние переключатели</a></li>
-  								<li><a href="#">Тросики, рубашки и т.д.</a></li>
+  								<li><a href="?cat=shifters">Манетки</a></li>
+  								<li><a href="?cat=brakes">Томрозная система</a></li>
+  								<li><a href="?cat=frontDerailleurs">Передние переключатели</a></li>
+  								<li><a href="?cat=rearDerailleurs">Задние переключатели</a></li>
+  								<li><a href="?cat=rigEtc">Тросики, рубашки и т.д.</a></li>
   							</ul>
 			  			</li>
 			  			<li class="dropdown">
@@ -121,8 +121,8 @@
 				  				Рама и седло <span class="caret"></span>
 				  			</a>
 				  			<ul class="dropdown-menu" role="menu">
-  								<li><a href="#">Рамы</a></li>
-  								<li><a href="#">Сёдла и подседельные штыри</a></li>
+  								<li><a href="?cat=frames">Рамы</a></li>
+  								<li><a href="?cat=saddles">Сёдла и подседельные штыри</a></li>
   							</ul>
 			  			</li>
 			  			<li class="dropdown">
@@ -130,10 +130,10 @@
 				  				Аксессуары <span class="caret"></span>
 				  			</a>
 				  			<ul class="dropdown-menu" role="menu">
-  								<li><a href="#">Электроника</a></li>
-  								<li><a href="#">Багажники, сумки</a></li>
-  								<li><a href="#">Фляги и держатели</a></li>
-  								<li><a href="#">Прочее...</a></li>
+  								<li><a href="?cat=electronics">Электроника</a></li>
+  								<li><a href="?cat=carriers">Багажники, сумки</a></li>
+  								<li><a href="?cat=flasks">Фляги и держатели</a></li>
+  								<li><a href="?cat=auxiliariesEtc">Прочее...</a></li>
   							</ul>
 			  			</li>
   					</ul>
