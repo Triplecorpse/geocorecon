@@ -68,7 +68,7 @@ cassetes:'\
 chains:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=chain_install.html">\
-		Как собрать велосипедное колесо\
+		Установка цепи на многоскоростные велосипеды\
 	</a>\
 </div>',
 
