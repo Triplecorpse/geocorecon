@@ -155,6 +155,7 @@
           x.open("GET", sidebar, true);
           x.send();
           document.getElementById("artMenu").innerHtml = x.responseText;
+          console.log("respText: " + x.responseText);
           console.log("x: " + x);
         </script>
       </div>
