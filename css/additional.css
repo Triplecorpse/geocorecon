@@ -26,6 +26,10 @@ article blockquote p
 	font-size:12px;
 	font-style:italic;
 	color:#555;
-	margin-top:50px;
-	margin-bottom:50px;
+}
+
+article blockquote
+{
+	margin-top:100px;
+	margin-bottom:100px;
 }
