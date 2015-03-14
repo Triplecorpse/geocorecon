@@ -42,7 +42,7 @@
       }
       
       //We need to execute this function only after body load to use jquery. This may remove unnessesary charachters from GET parameters
-      function bodyLoad()
+      function loadBody()
       {
       	art = $(art).text();
       	cat = $(cat).text();
@@ -53,7 +53,7 @@
     </script>
     <script type="text/javascript" src="htmls/sideMenus/sideMenus.js"></script>
   </head>
-  <body class="container" onload="bodyLoad" role="document">
+  <body class="container" onload="loadBody" role="document">
   	<header class="page-header">
   		<nav class="navbar navbar-default navbar-fixed-top">
   			<div class="container">
@@ -195,5 +195,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
+    <script>loadBody();</script>
   </body>
 </html>
