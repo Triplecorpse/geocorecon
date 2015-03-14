@@ -53,7 +53,7 @@ tires:'\
 
 
 pedals:null,
-cranksets'\
+cranksets:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=isis_octalink_removal_installation.html">\
 		Установка и удаление шатунов: ISIS и Octalink\
