@@ -40,7 +40,9 @@
       {
         cat = parameters.slice(parameters.indexOf("=") + 1);
       }
-
+      art = $(art).text();
+      cat = $(cat).text();
+      
       console.log("category: " + cat);
       console.log("article: " + art);
     </script>
