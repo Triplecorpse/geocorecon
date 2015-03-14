@@ -41,6 +41,9 @@
         cat = parameters.slice(parameters.indexOf("=") + 1);
       }
       
+      console.log("category: " + cat);
+      console.log("article: " + art);
+      
       //We need to execute this function only after body load to use jquery. This may remove unnessesary charachters from GET parameters
       function loadBody()
       {
@@ -195,6 +198,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.js"></script>
-    <script>loadBody();</script>
   </body>
 </html>
