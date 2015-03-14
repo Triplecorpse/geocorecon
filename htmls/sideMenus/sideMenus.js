@@ -5,7 +5,7 @@ url = url.slice(0, url.indexOf("?"));
 
 var htmls = {forks:'\
 <div class="list-group">\
-	<a class="list-group-item" href="' + url + '?' + cat + '&art=steering_column_length.html">\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=steering_column_length.html">\
 		Обрезка рулевой трубы вилки\
 	</a>\
 </div>',
@@ -13,7 +13,7 @@ grips:null,
 handlebars:null,
 headsets:'\
 <div class="list-group">\
-	<a class="list-group-item" href="' + url + '?' + cat + '&art=headet_standards.html">\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=headet_standards.html">\
 		Стандарты рулевых колонок\
 	</a>\
 	<a class="list-group-item" href="&art=conventional_threadless.html">\
