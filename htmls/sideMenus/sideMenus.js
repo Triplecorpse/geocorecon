@@ -18,7 +18,7 @@ handlebars:'\
 </div>',
 headsets:'\
 <div class="list-group">\
-	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=headet_standards.html">\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=headset_standards.html">\
 		Стандарты рулевых колонок\
 	</a>\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=conventional_threadless.html">\
