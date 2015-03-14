@@ -21,12 +21,16 @@ article h2
 {
 	margin-top:0px;
 }
-article blockquote p, article blockquote ul, article blockquote ol, article blockquote li, .copyright
+article blockquote p, .copyright
 {
 	font-size:12px;
 	font-style:italic;
 	color:#555;
-	padding-left:0px;
+}
+
+article blockquote ul, article blockquote ol
+{
+	padding-left:12px;
 }
 
 article blockquote
