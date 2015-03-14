@@ -145,7 +145,7 @@
   		</div>
   	</header>
     <div class="row">
-    	<div class="col-md-4">
+    	<div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
           //document.write(htmls[cat]);
@@ -154,6 +154,7 @@
           console.log("sidebar: " + sidebar);
           x.open("GET", sidebar, true);
           x.send();
+          document.getElementById("artMenu").innerHtml = x.responseText;
           console.log("x: " + x);
         </script>
       </div>
