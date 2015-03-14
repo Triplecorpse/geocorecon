@@ -24,4 +24,6 @@ article h2
 article blockquote p
 {
 	font-size:12px;
+	font-style:italic;
+	color:#555;
 }
