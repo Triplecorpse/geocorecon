@@ -23,7 +23,7 @@
       console.log("url: "+url);
       var parameters = document.location.search;  //?cat=xxx&art=yyy
       var cat = null;
-      var art = "!mainDescription.html";
+      var art = null;
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
@@ -190,6 +190,7 @@
               }
               xmlhttp.open("GET", url + "/htmls/" + art, true);
               xmlhttp.send();
+              console.log("article: " + url + "/htmls/" + art);
             }
           </script>
         </article>
