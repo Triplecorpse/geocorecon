@@ -19,7 +19,7 @@ headsets:'\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=conventional_threadless.html">\
 		Обслуживание безрезьбовых колонок\
 	</a>\
-</div>'}
+</div>'};
 
 console.log('url, cat: ' url + ' ' + cat);
 
