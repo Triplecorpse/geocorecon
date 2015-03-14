@@ -174,24 +174,29 @@
       </div>
       <div class="col-md-8">
         <article id="art">
-          <script>            
+          <script>  
+          console.log("article: " + url + "/htmls/" + art);
             //if(art==null)
             {
               //art = "!mainDescription.html";
             }
-            
-            var xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function()
+            if(cat && art)
             {
-              if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange = function()
               {
-                document.getElementById("art").innerHTML=xmlhttp.responseText;
-                console.log("response: " + xmlhttp.responseText);
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                  document.getElementById("art").innerHTML=xmlhttp.responseText;
+                  console.log("response: " + xmlhttp.responseText);
+                }
+                xmlhttp.open("GET", url + "/htmls/" + art, true);
+                xmlhttp.send();
+                console.log("article: " + url + "/htmls/" + art);
               }
-              xmlhttp.open("GET", url + "/htmls/" + art, true);
-              xmlhttp.send();
               console.log("article: " + url + "/htmls/" + art);
             }
+            console.log("article: " + url + "/htmls/" + art);
           </script>
         </article>
       </div>
