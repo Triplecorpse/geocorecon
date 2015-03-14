@@ -23,7 +23,7 @@
       console.log("url: "+url);
       var parameters = document.location.search;  //?cat=xxx&art=yyy
       var cat = null;
-      var art = "!mainDescription";
+      var art = "!mainDescription.html";
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
@@ -160,7 +160,7 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          if(cat != "")
+          if((cat != "") && (cat != null) && (cat != undefined))  //&& what fucking else
           {
             document.getElementById('artMenu').style.display='inline-block';
             document.write(htmls[cat]);
@@ -173,17 +173,19 @@
       </div>
       <div class="col-md-8">
         <article id="art">
-          <script>
-            //if(cat && art)
+          <script>            
+            if(art==null)
             {
-              var xmlhttp = new XMLHttpRequest();
-              xmlhttp.onreadystatechange=function()
+              art = "!mainDescription.html";
+            }
+            
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function()
+            {
+              if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
               {
-                if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {
-                  document.getElementById("art").innerHTML=xmlhttp.responseText;
-                  console.log("response: " + xmlhttp.responseText);
-                }
+                document.getElementById("art").innerHTML=xmlhttp.responseText;
+                console.log("response: " + xmlhttp.responseText);
               }
               xmlhttp.open("GET", url + "/htmls/" + art, true);
               xmlhttp.send();
