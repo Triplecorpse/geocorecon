@@ -39,3 +39,8 @@ article blockquote
 	margin-bottom:36px;
 	display:block;
 }
+
+footer
+{
+	border-bottom:1px solid #eee;
+}
