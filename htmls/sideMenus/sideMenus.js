@@ -77,17 +77,17 @@ chains:'\
 shifters:null,
 brakes:'\
 <div class="list-group">\
-	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=inner_tube_repair.html">\
-		Ремонт велосипедной камеры и покрышки\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=avid_bleed.html">\
+		Подгонка длины гидролинии и прокачка тормозов Avid\
 	</a>\
-	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=tire_tube_removal_installaton.html">\
-		Установка и удаление покрышки и камеры\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=disc_adj.html">\
+		Установка и настройка дискового тормоза: Post &amp; IS\
 	</a>\
-	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=ust_tubeless.html">\
-		Установка и обслуживание бескамерных покрышек\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=rotor_service.html">\
+		Установка и обслуживание ротора\
 	</a>\
-	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=ust_tubeless.html">\
-		Установка и обслуживание бескамерных покрышек\
+	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=v_br_service.html">\
+		Обслуживание тормоза: V-brake\
 	</a>\
 </div>',
 frontDerailleurs:'\
