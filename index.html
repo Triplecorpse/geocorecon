@@ -164,12 +164,16 @@
           {
             document.write(htmls[cat]);
           }
+          else
+          {
+            document.getElementById("artMenu").visibility="collapsed";
+          }
         </script>
       </div>
       <div class="col-md-8">
         <article id="art">
           <script>
-            if(cat && art)
+            //if(cat && art)
             {
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange=function()
