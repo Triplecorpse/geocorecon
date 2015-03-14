@@ -148,15 +148,7 @@
     	<div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          //document.write(htmls[cat]);
-          var x = new XMLHttpRequest();
-          var sidebar = url.slice(0, url.lastIndexOf("/")) + "/htmls/sideMenus/" + cat + ".html"
-          console.log("sidebar: " + sidebar);
-          x.open("GET", sidebar, true);
-          x.send();
-          document.getElementById("artMenu").innerHtml = x.responseText;
-          console.log("respText: " + x.responseText);
-          console.log("x: " + x);
+          document.write(htmls[cat]);
         </script>
       </div>
       <div class="col-md-8">
