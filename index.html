@@ -148,7 +148,6 @@
         </div>
         <div class="col-sm-4 well headerwell">
           <p>
-            <span class="label label-danger">Написано веЛОмастером.</span><br />
             <span class="label label-warning">Демо версия, ни один из контактов не работает</span><br />
             Тел: 097-149-**-**<br />
             Skype: micro**** <a href="callto:micro****">(Позвонить)</a><br />
@@ -161,42 +160,240 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          if((cat != "") && (cat != null) && (cat != undefined))  //&& what fucking else
-          {
-            //document.getElementById('artMenu').style.display='inline-block';
-            document.write(htmls[cat]);
-          }
-          else
-          {
-            //document.getElementById('artMenu').style.display='none';
-          }
+          document.write(htmls[cat]);
         </script>
       </div>
       <div class="col-md-8">
         <article id="art">
-          <script>  
-          console.log("1 article: " + url + "htmls/" + art);
-            //if(art==null)
-            {
-              //art = "!mainDescription.html";
-            }
+          <script>
             if(cat && art)
             {
               var xmlhttp = new XMLHttpRequest();
-              xmlhttp.onreadystatechange = function()
+              xmlhttp.onreadystatechange=function()
               {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
                   document.getElementById("art").innerHTML=xmlhttp.responseText;
                   console.log("response: " + xmlhttp.responseText);
                 }
-                xmlhttp.open("GET", url + "htmls/" + art, true);
-                xmlhttp.send();
-                console.log("2 article: " + url + "htmls/" + art);
               }
-              console.log("3 article: " + url + "htmls/" + art);
+              xmlhttp.open("GET", url + "/htmls/" + art, true);
+              xmlhttp.send();
             }
-            console.log("4 article: " + url + "htmls/" + art);
+          </script>
+        </article>
+      </div>
+    </div>
+    <footer>
+      <div class="row">
+        <div class="col-sm-4">
+          <script>
+            var year = new Date().getFullYear();
+            var suffix = "";
+            if(year > 2015)
+            {
+              suffix = "- " + year;
+            }
+            var signature = "Bikenism <br /> 2015" + suffix;
+            document.write(signature);
+          </script>
+        </div>
+        <div class="col-sm-4">
+          <p class="signature">
+            Оригинальные материалы были взяты из блога Park Tools, московского велоклуба "Караван", статей Шелдона Брауна и Джона Аллена. Перевод - Эльдар Хаитов, Леонид Ливеровский.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bikenism Website</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/additional.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+      //defining global variables
+      var url = document.location.href.slice(0, document.location.href.indexOf("?"));
+      console.log("url: "+url);
+      var parameters = document.location.search;  //?cat=xxx&art=yyy
+      var cat = null;
+      var art = null;
+
+      //defining article name. The article must be after category
+      if(parameters.indexOf("&") != -1)
+      {
+        art = parameters.slice(parameters.lastIndexOf("=") + 1);
+      }
+
+      //defining category name. The category must be before article
+      if((parameters.indexOf("?") != -1) && (parameters.indexOf("&") != -1))
+      {
+        cat = parameters.slice(parameters.indexOf("=") + 1, parameters.indexOf("&"));
+      }
+      else if(parameters.indexOf("?") != -1)
+      {
+        cat = parameters.slice(parameters.indexOf("=") + 1);
+      }
+      
+      console.log("category: " + cat);
+      console.log("article: " + art);
+      
+      //We need to execute this function only after body load to use jquery. This may remove unnessesary charachters from GET parameters
+      function loadBody(){}
+      //{
+        //art = $(art).text();
+        //cat = $(cat).text();
+        //console.log("category: " + cat);
+        //console.log("article: " + art);
+      //}
+      
+    </script>
+    <script type="text/javascript" src="htmls/sideMenus/sideMenus.js"></script>
+  </head>
+  <body class="container" onload="loadBody()" role="document">
+    <header class="page-header">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <!--<button class="navbar-toggle collapsed" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button">
+              <span class="sr-only"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>-->
+            <a class="navbar-brand" href="index.html">Bikenism</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">
+                  Рулевое управление <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="?cat=forks">Вилки</a></li>
+                  <li><a href="?cat=headsets">Рулевые колонки</a></li>
+                  <li><a href="?cat=handlebars">Рули</a></li>
+                  <li><a href="?cat=grips">Грипсы</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">
+                  Колёса <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="?cat=hubs">Втулки</a></li>
+                  <li><a href="?cat=spokes">Спицы</a></li>
+                  <li><a href="?cat=rims">Обода</a></li>
+                  <li><a href="?cat=tires">Резина</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">
+                  Ходовая часть <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="?cat=pedals">Педали</a></li>
+                  <li><a href="?cat=cranksets">Системы</a></li>
+                  <li><a href="?cat=cassetes">Кассеты</a></li>
+                  <li><a href="?cat=chains">Цепи</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">
+                  Навесное оборудование <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="?cat=shifters">Манетки</a></li>
+                  <li><a href="?cat=brakes">Томрозная система</a></li>
+                  <li><a href="?cat=frontDerailleurs">Передние переключатели</a></li>
+                  <li><a href="?cat=rearDerailleurs">Задние переключатели</a></li>
+                  <li><a href="?cat=rigEtc">Тросики, рубашки и т.д.</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">
+                  Рама и седло <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="?cat=bikes">Велосипеды</a></li>
+                  <li><a href="?cat=frames">Рамы</a></li>
+                  <li><a href="?cat=saddles">Сёдла и подседельные штыри</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" href="#">
+                  Аксессуары <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="?cat=electronics">Электроника</a></li>
+                  <li><a href="?cat=carriers">Багажники, сумки</a></li>
+                  <li><a href="?cat=flasks">Фляги и держатели</a></li>
+                  <li><a href="?cat=auxiliariesEtc">Прочее...</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="row">
+        <div class="col-sm-4 well headerwell">
+          <h1>Веломеханика</h1>
+        </div>
+        <div class="col-sm-4 well headerwell">
+          <p>
+            <span class="label label-warning">Демо версия, ни один из контактов не работает</span><br />
+            Тел: 097-149-**-**<br />
+            Skype: micro**** <a href="callto:micro****">(Позвонить)</a><br />
+            Email: benzin***@list.ru <a href="mailto:benzin***@list.ru">(Написать письмо)</a>
+          </p>
+        </div>
+      </div>
+    </header>
+    <div class="row">
+      <div id="artMenu" class="col-md-4">
+        <script>
+          //Navigation menu will come here
+          document.write(htmls[cat]);
+        </script>
+      </div>
+      <div class="col-md-8">
+        <article id="art">
+          <script>
+            if(cat && art)
+            {
+              var xmlhttp = new XMLHttpRequest();
+              xmlhttp.onreadystatechange=function()
+              {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200)
+                {
+                  document.getElementById("art").innerHTML=xmlhttp.responseText;
+                  console.log("response: " + xmlhttp.responseText);
+                }
+              }
+              xmlhttp.open("GET", url + "/htmls/" + art, true);
+              xmlhttp.send();
+            }
           </script>
         </article>
       </div>
