@@ -9,7 +9,7 @@ var htmls = {forks:'\
 		Обрезка рулевой трубы вилки\
 	</a>\
 </div>',
-grips:null,
+grips:'<div class="alert alert-info">В этом разделе нет статей.</div>',
 handlebars:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=seatpost_stem_seized.html">\
@@ -28,8 +28,8 @@ headsets:'\
 
 //-------------------------------------------------------------------------------------------------------------
 
-hubs:null,
-spokes:null,
+hubs:'<div class="alert alert-info">В этом разделе нет статей.</div>',
+spokes:'<div class="alert alert-info">В этом разделе нет статей.</div>',
 rims:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=wheel_building.html">\
@@ -52,7 +52,7 @@ tires:'\
 //-------------------------------------------------------------------------------------------------------------
 
 
-pedals:null,
+pedals:'<div class="alert alert-info">В этом разделе нет статей.</div>',
 cranksets:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=isis_octalink_removal_installation.html">\
@@ -74,7 +74,7 @@ chains:'\
 
 //-------------------------------------------------------------------------------------------------------------
 
-shifters:null,
+shifters:'<div class="alert alert-info">В этом разделе нет статей.</div>',
 brakes:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=avid_bleed.html">\
@@ -102,7 +102,7 @@ rearDerailleurs:'\
 		Настройка заднего переключателя\
 	</a>\
 </div>',
-rigEtc:null,
+rigEtc:'<div class="alert alert-info">В этом разделе нет статей.</div>',
 
 //-------------------------------------------------------------------------------------------------------------
 
@@ -139,11 +139,9 @@ saddles:'\
 
 //-------------------------------------------------------------------------------------------------------------
 
-electronics:null,
-carriers:null,
-flasks:null,
-auxilliariesEtc:null};
-
-console.log('url, cat: ' + url + ' ' + cat);
+electronics:'<div class="alert alert-info">В этом разделе нет статей.</div>',
+carriers:'<div class="alert alert-info">В этом разделе нет статей.</div>',
+flasks:'<div class="alert alert-info">В этом разделе нет статей.</div>',
+auxilliariesEtc:'<div class="alert alert-info">В этом разделе нет статей.</div>'};
 
 //-------------------------------------------------------------------------------------------------------------
