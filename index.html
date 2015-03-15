@@ -190,7 +190,7 @@
                   document.getElementById("art").innerHTML=xmlhttp.responseText;
                   console.log("response: " + xmlhttp.responseText);
                 }
-                xmlhttp.open("GET", url + "/htmls/" + art, true);
+                xmlhttp.open("GET", url + "htmls/" + art, true);
                 xmlhttp.send();
                 console.log("article: " + url + "/htmls/" + art);
               }
