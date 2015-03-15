@@ -28,7 +28,9 @@
       console.log("indexOf('index.html'): " + url.indexOf("index.html"));
       if(url.indexOf("index.html") != -1)
       {
+        console.log("lastIndexOf('/'): " + url.lastIndexOf("/"));
         url.slice(url.lastIndexOf("/"));
+        console.log("new url" + url);
       }
       console.log("url: " + url);
 
