@@ -25,11 +25,12 @@
       var art = null;
       
       //removing /index.html from url if exists
+      console.log("indexOf("index.html"): " + indexOf("index.html"))
       if(url.indexOf("index.html") != -1)
       {
         url.slice(url.lastIndexOf("/"));
       }
-      console.log("url: "+url);
+      console.log("url: " + url);
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
