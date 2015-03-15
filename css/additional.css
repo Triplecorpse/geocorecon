@@ -7,12 +7,18 @@
 
 	/*maybe make a panel?*/
 }
-.headerwell p, .headerwell h1{
+.headerwell p, .headerwell h1, .headerwell button{
    margin: 0;
    position: absolute;
    top: 50%;
    transform: translate(0, -50%)
 }
+
+.headerwell button
+{
+	
+}
+
 .signature
 {
 	font-size: smaller;
