@@ -4,6 +4,12 @@
 	position: relative;
 	height: 112px;
 }
+
+.headerright, .headerleft
+{
+	text-align:center;
+}
+
 .headerwell p, .headerwell h1, .headerwell .crutch{
    margin: 0;
    position: absolute;
