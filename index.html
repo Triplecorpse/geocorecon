@@ -166,13 +166,13 @@
             {
               //if we have a category but no article, take category descriptions else take general
               if(cat)
-                art = 'descriptions/' + cat;
+                art = 'descriptions/' + cat + '.html';
               else
                 art = 'descriptions/mainDescription.html'
             }
             
             //load article with ajax
-            if(cat)
+            //if(cat)
             {
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange=function()
