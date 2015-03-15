@@ -151,6 +151,7 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
+          //Variable htmls represents an object with menus. For more details, see htmls/sideMenus/sideMenus.js
           if(cat != undefined)
             document.write(htmls[cat]);
           else
@@ -160,10 +161,14 @@
       <div class="col-md-8">
         <article id="art">
           <script>
-            //leave no blank articles
+            //leave no blank articles!
             if(!art)
             {
-              art = 'descriptions/mainDescription.html'
+              //if we have a category but no article, take category descriptions else take general
+              if(cat)
+                art = 'descriptions/' + cat;
+              else
+                art = 'descriptions/mainDescription.html'
             }
             
             //load article with ajax
