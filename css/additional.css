@@ -10,18 +10,11 @@
 	text-align:center;
 }
 
-.headerwell p, .headerwell h1, .headerwell .crutch{
+.headerwell p, .headerwell h1{
    margin: 0;
    position: absolute;
    top: 50%;
    transform: translate(0, -50%)
-}
-
-.headerwell .crutch
-{
-	display:block;
-	margin-left:auto;
-	margin-right:auto;
 }
 
 .signature
