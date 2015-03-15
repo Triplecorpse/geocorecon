@@ -25,7 +25,7 @@
       var art = null;
       
       //removing index.html from url if exists
-      if(url.indexOf("index.htm") != -1)
+      if(url.indexOf("index.htm") != -1) //*.htm - everything for Google Chrome
       {
         url = url.slice(0, url.lastIndexOf("/"));
       }
@@ -143,9 +143,7 @@
           </p>
         </div>
         <div class="col-sm-4 well headerwell headerright">
-          <div class="crutch">
-            <button class="btn btn-lg btn-default">Документация</button>
-          </div>
+          <button class="btn btn-lg btn-default">Документация</button>
         </div>
       </div>
     </header>
@@ -162,7 +160,14 @@
       <div class="col-md-8">
         <article id="art">
           <script>
-            if(cat && art)
+            //leave no blank articles
+            if(!art)
+            {
+              art = 'htmls/descriptions/mainDescription.html'
+            }
+            
+            //load article with ajax
+            if(cat)
             {
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange=function()
