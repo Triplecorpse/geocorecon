@@ -3,9 +3,6 @@
 	margin-top: 24px;
 	position: relative;
 	height: 112px;
-	/*border: 1px solid gray;*/
-
-	/*maybe make a panel?*/
 }
 .headerwell p, .headerwell h1, .headerwell button{
    margin: 0;
@@ -16,7 +13,7 @@
 
 .headerwell button
 {
-	
+	display:block;
 }
 
 .signature
