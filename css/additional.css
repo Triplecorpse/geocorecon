@@ -4,15 +4,16 @@
 	position: relative;
 	height: 112px;
 }
-.headerwell p, .headerwell h1, .headerwell button{
+.headerwell p, .headerwell h1, .headerwell .crutch{
    margin: 0;
    position: absolute;
    top: 50%;
    transform: translate(0, -50%)
 }
 
-.headerwell button
+.headerwell .crutch
 {
+	disolay:inline-block;
 	margin-left:auto;
 	margin-right:auto;
 }
