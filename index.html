@@ -24,12 +24,11 @@
       var cat = null;
       var art = null;
       
-      //removing index.htm from url if exists
+      //removing index.html from url if exists
       if(url.indexOf("index.htm") != -1)
       {
         url = url.slice(0, url.lastIndexOf("/"));
       }
-      console.log("url at the beginning: " + url);
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
@@ -47,32 +46,14 @@
         cat = parameters.slice(parameters.indexOf("=") + 1);
       }
       
-      console.log("category: " + cat);
-      console.log("article: " + art);
-      
-      //We need to execute this function only after body load to use jquery. This may remove unnessesary charachters from GET parameters
-      function loadBody(){}
-      //{
-        //art = $(art).text();
-        //cat = $(cat).text();
-        //console.log("category: " + cat);
-        //console.log("article: " + art);
-      //}
-      
     </script>
     <script type="text/javascript" src="htmls/sideMenus/sideMenus.js"></script>
   </head>
-  <body class="container" onload="loadBody()" role="document">
+  <body class="container" role="document">
     <header class="page-header">
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <!--<button class="navbar-toggle collapsed" aria-controls="navbar" aria-expanded="false" data-target="#navbar" data-toggle="collapse" type="button">
-              <span class="sr-only"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>-->
             <a class="navbar-brand" href="index.html">Bikenism</a>
           </div>
           <div class="navbar-collapse collapse">
@@ -166,13 +147,15 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          document.write(htmls[cat]);
+          if(cat != undefined)
+            document.write(htmls[cat]);
+          else
+            document.write("<div class='alert alert-info'>Добро пожаловать!</div>")
         </script>
       </div>
       <div class="col-md-8">
         <article id="art">
           <script>
-            console.log("url before article load: " + url);
             if(cat && art)
             {
               var xmlhttp = new XMLHttpRequest();
@@ -181,7 +164,6 @@
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
                 {
                   document.getElementById("art").innerHTML=xmlhttp.responseText;
-                  console.log("response: " + xmlhttp.responseText);
                 }
               }
               xmlhttp.open("GET", url + "/htmls/" + art, true);
