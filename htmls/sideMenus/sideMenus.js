@@ -1,8 +1,3 @@
-//Retrieving html to paste into links
-var url = document.location.href;
-url = url.slice(0, url.indexOf("?"));
-//console.log(url);
-
 var htmls = {forks:'\
 <div class="list-group">\
 	<a class="list-group-item" href="' + url + '?cat=' + cat + '&art=steering_column_length.html">\
