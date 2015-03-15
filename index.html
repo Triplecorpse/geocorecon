@@ -29,7 +29,7 @@
       {
         url = url.slice(0, url.lastIndexOf("/"));
       }
-      console.log("url: " + url);
+      console.log("url at the beginning: " + url);
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
@@ -172,6 +172,7 @@
       <div class="col-md-8">
         <article id="art">
           <script>
+            console.log("url before article load: " + url);
             if(cat && art)
             {
               var xmlhttp = new XMLHttpRequest();
