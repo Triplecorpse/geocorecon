@@ -20,7 +20,6 @@
     <script>
       //defining global variables
       var url = document.location.href.slice(0, document.location.href.indexOf("?"));
-      console.log("url: "+url);
       var parameters = document.location.search;  //?cat=xxx&art=yyy
       var cat = null;
       var art = null;
@@ -30,6 +29,7 @@
       {
         url.slice(url.lastIndexOf("/"));
       }
+      console.log("url: "+url);
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
@@ -154,6 +154,7 @@
         </div>
         <div class="col-sm-4 well headerwell">
           <p>
+            <span class="label label-danger">веЛОмастер</span><br />
             <span class="label label-warning">Демо версия, ни один из контактов не работает</span><br />
             Тел: 097-149-**-**<br />
             Skype: micro**** <a href="callto:micro****">(Позвонить)</a><br />
@@ -166,10 +167,7 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          if(cat)
-          {
-            document.write(htmls[cat]);
-          }
+          document.write(htmls[cat]);
         </script>
       </div>
       <div class="col-md-8">
@@ -177,21 +175,19 @@
           <script>
             if(art == null)
               art = 'descriptions/mainDescription.html'
-            console.log("art: " + art);
+            
             if(cat && art)
-            {console.log("cat & art: " + art);
+            {
               var xmlhttp = new XMLHttpRequest();
               xmlhttp.onreadystatechange=function()
-              {console.log("readystate: " + art);
+              {
                 if (xmlhttp.readyState==4 && xmlhttp.status==200)
-                {console.log("if rs4 & stat200: " + art);
+                {
                   document.getElementById("art").innerHTML=xmlhttp.responseText;
-                  console.log("response: " + xmlhttp.responseText);
                 }
               }
               xmlhttp.open("GET", url + "/htmls/" + art, true);
               xmlhttp.send();
-              console.log("art: " + url + "/htmls/" + art);
             }
           </script>
         </article>
