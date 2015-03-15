@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bikenism Website</title>
 
-    <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/additional.css" rel="stylesheet">
 
@@ -30,9 +29,8 @@
       {
         console.log("lastIndexOf('/'): " + url.lastIndexOf("/"));
         url = url.slice(0, url.lastIndexOf("/"));
-        console.log("new url: " + url);
       }
-      console.log("url: " + url);
+      console.log("new url: " + url);
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
