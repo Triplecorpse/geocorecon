@@ -20,10 +20,16 @@
     <script>
       //defining global variables
       var url = document.location.href.slice(0, document.location.href.indexOf("?"));
-      console.log("url: "+url);
       var parameters = document.location.search;  //?cat=xxx&art=yyy
       var cat = null;
       var art = null;
+      
+      //removing index.html from url if exists
+      if(url.indexOf("index.html") != -1)
+      {
+        url = url.slice(0, url.lastIndexOf("/"));
+      }
+      console.log("url: " + url);
 
       //defining article name. The article must be after category
       if(parameters.indexOf("&") != -1)
