@@ -160,7 +160,7 @@
       <div id="artMenu" class="col-md-4">
         <script>
           //Navigation menu will come here
-          if(cat != null)
+          if(cat)
           {
             document.write(htmls[cat]);
           }
@@ -171,6 +171,7 @@
           <script>
             if(art == null)
               art = 'descriptions/mainDescription.html'
+            console.log("art: " + art);
             if(cat && art)
             {
               var xmlhttp = new XMLHttpRequest();
