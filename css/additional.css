@@ -1,53 +1,14 @@
-.headerwell
+#wrapper .input-group .input-group-addon
 {
-	margin-top: 24px;
-	position: relative;
-	height: 112px;
+    /*display: table-column;*/
 }
 
-.headerwell p, .headerwell h1, .headerwell button{
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-right: -50%;
-	transform: translate(-50%, -50%)
+body div
+{
+    margin-top:10px;
 }
 
-.signature
+.container
 {
-	font-size: smaller;
-}
-article h2
-{
-	margin-top:0px;
-}
-article blockquote, .copyright
-{
-	font-size:12px;
-	font-style:italic;
-	color:#555;
-}
-
-article blockquote ul, article blockquote ol
-{
-	padding-left:12px;
-}
-
-article blockquote
-{
-	margin-top:36px;
-	margin-bottom:36px;
-}
-
-.copyright
-{
-	margin-bottom:24px;
-	display:block;
-}
-
-footer
-{
-	padding-top:12px;
-	border-top:1px solid #eee;
+    max-width: 736px;
 }
