@@ -14,7 +14,7 @@ function fromDdmmss(dd, mm, ss)
 //this function converts from ddºmm.mmmmmmmm to all others
 function fromDdmmPointM8(dd, mmPointM8)
 {
-    gddPointD8 = dd / 1 + mmPointM8 / 60.toPrecision(5);
+    gddPointD8 = (dd / 1 + mmPointM8 / 60).toPrecision(5);
     fromDdPointD8(gddPointD8);
 }
 
