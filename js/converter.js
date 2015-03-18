@@ -22,10 +22,10 @@ function fromDdmmPointM8(dd, mmPointM8)
 function fromDdPointD8(ddPointD8)
 {
     var dd = truncate(ddPointD8);
-    var mm = ((ddPointD8 - dd) * 60).toPrecision(5);
-    var ss = (((ddPointD8 - dd) * 60 - mm) * 60).toPrecision(5);
-    gddmmss = dd + "°" + truncate(mm) + "'" + ss + '"';
-    gddmmPointM8 = dd + "°" + mm + "'";
+    var mm = (ddPointD8 - dd) * 60;
+    var ss = ((ddPointD8 - dd) * 60 - mm) * 60;
+    gddmmss = dd + "°" + truncate(mm) + "'" + Number(ss).toPrecision(2) + '"';
+    gddmmPointM8 = dd + "°" + Number(mm).toPrecision + "'";
 }
 
 //additional function for some conversions
