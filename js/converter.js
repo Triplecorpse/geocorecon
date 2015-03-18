@@ -24,8 +24,8 @@ function fromDdPointD8(ddPointD8)
     var dd = truncate(ddPointD8);
     var mm = (ddPointD8 - dd) * 60;
     var ss = ((ddPointD8 - dd) * 60 - mm) * 60;
-    gddmmss = dd + "°" + truncate(mm) + "'" + Number(ss).toPrecision(2) + '"';
-    gddmmPointM8 = dd + "°" + Number(mm).toPrecision + "'";
+    gddmmss = dd + "°" + truncate(mm) + "'" + ss.toPrecision(2) + '"';
+    gddmmPointM8 = dd + "°" + mm.toPrecision(4) + "'";
 }
 
 //additional function for some conversions
