@@ -12,3 +12,8 @@ body div
 {
     max-width: 736px;
 }
+input
+{
+    display:block; !important
+    width:100%;
+}
