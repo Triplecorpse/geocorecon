@@ -1,3 +1,2 @@
-# bikenism
-Test site dedicated to bycycle mechanism
-This sited will be made for some practice in front end developmrnt
+# Geocoordinates translator
+Code refactoring comes. With even greater functionality. I'm sorry for writing such code
